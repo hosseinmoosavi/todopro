@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStoreHook} from 'react-redux';
-import TaskkArray from './components/redux/reducer/taskArray';
 
 
 const root = ReactDOM.createRoot(
