@@ -28,24 +28,18 @@ export default function NewTask() {
     const taskexHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTaskex(e.currentTarget.value)
         console.log(taskex)
-
     }
     const { value, setValue } = useContext(TaskArray)
 
-    // setNewTask([
-    // { tasktilte: taskTitle, taskexp: taskex, id: 2 }
-    // ])
-
 
     const addHandler = () => {
-        setNewTask([
-            {
-                tasktitle:taskTitle,
-                taskexp:taskex,
-                id:2
-            }
-        ])
-        setValue(newTask)
+        setNewTask([{
+            tasksitle:taskTitle,
+            taskexp:taskex,
+            id:1
+        }])
+        
+        setValue("newTask")
 
     }
 

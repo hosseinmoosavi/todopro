@@ -4,9 +4,14 @@ import NewTask from "../newtask/newtask"
 import { Box } from '@mui/material'
 import "./frame.css"
 import { TaskArray } from "../contexts/arraycontext"
+import * as React from "react"
 
 export default function Frame() {
  const [value, setValue]=useState()
+
+ const btHandler=()=>{
+    console.log(value)
+ }
 
     return (
         <>
@@ -17,14 +22,11 @@ export default function Frame() {
                     </div>
                     <div style={{ margin: '10px' }}>
 
-                        {value.map((value)=>{
-                            
-                        })
-
-                        }
+                        <Tasks/>
                     </div>
                 </Box>
             </TaskArray.Provider>
+            <button onClick={btHandler} >show context</button>
         </>
     )
 }
