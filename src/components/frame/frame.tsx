@@ -6,18 +6,22 @@ import "./frame.css"
 import { TaskArray } from "../contexts/arraycontext"
 
 export default function Frame() {
-
+ const [value, setValue]=useState()
 
     return (
         <>
-            <TaskArray.Provider value={null}>
+            <TaskArray.Provider value={{value,setValue}}>
                 <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                     <div style={{ margin: '10px' }}>
-                        <NewTask name="a" />
+                        <NewTask/>
                     </div>
                     <div style={{ margin: '10px' }}>
 
-                        <Tasks />
+                        {value.map((value)=>{
+                            
+                        })
+
+                        }
                     </div>
                 </Box>
             </TaskArray.Provider>

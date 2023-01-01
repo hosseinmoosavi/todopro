@@ -7,18 +7,13 @@ import { TaskArray } from '../contexts/arraycontext';
 import { useContext, useState } from 'react';
 import * as React from "react"
 // import "./tasks.css"
-interface Xinterface {
-    name: string
-    zoombaybayo?: number
-}
-export default function NewTask(props: Xinterface) {
+export default function NewTask() {
 
-    
 
-    const ta = useContext(TaskArray)
+
     const [taskTitle, setTaskTitle] = useState("")
     const [taskex, setTaskex] = useState<any>()
-    const [newTask, setNewTask] = React.useState<object>(TaskArray)
+    const [newTask, setNewTask] = React.useState<any>()
 
 
 
@@ -35,21 +30,31 @@ export default function NewTask(props: Xinterface) {
         console.log(taskex)
 
     }
+    const { value, setValue } = useContext(TaskArray)
 
+    // setNewTask([
+    // { tasktilte: taskTitle, taskexp: taskex, id: 2 }
+    // ])
 
 
     const addHandler = () => {
-        const newt: object = [
-            { taskTitle },
-            { taskex }
-        ]
-        setNewTask(newt)
-        console.log(newTask)
+        setNewTask([
+            {
+                tasktitle:taskTitle,
+                taskexp:taskex,
+                id:2
+            }
+        ])
+        setValue(newTask)
+
     }
+
+
 
 
     return (
         <>
+            <div>{value}</div>
             <Box
                 component="div"
                 sx={{

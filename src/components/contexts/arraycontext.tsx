@@ -12,4 +12,4 @@ const a:taskarrayInterface[]=[
         id:2
     }
 ]
-export const TaskArray=React.createContext<taskarrayInterface| null>(a)
+export const TaskArray=React.createContext<any>(a)
